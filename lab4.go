@@ -53,8 +53,6 @@ func node(in <-chan *Token, out chan<- *Token, num int) {
 			fmt.Println("Token died")
 			return
 		}
-		if out != nil {
-			out <- Tok
-		}
+		out <- Tok
 	}
 }
